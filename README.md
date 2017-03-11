@@ -2,7 +2,7 @@
 Homework assignments for Nonprocedural Programming at Matfyz, Charles University in Prague
 
 ## HW1
-1)	Implement division of two numbers in Prolog in succesor notation
+1.	Implement division of two numbers in Prolog in succesor notation
 	`hw1-1_arithmetics.pl` (includes all basic arithmetical operations)
 	
 	    add(+X, +Y, ?Z)
@@ -12,7 +12,7 @@ Homework assignments for Nonprocedural Programming at Matfyz, Charles University
 	
 	
 	
-2)	Implement predicate for _n_-th Fibonacci's number
+1.	Implement predicate for _n_-th Fibonacci's number
 	`hw1-2_generalisedFibbonacci.pl` (includes "generalised version" enabling to define first two elements of the sequence)
 	
 
