@@ -23,13 +23,15 @@ mergeWith boolOp (x:xs) (y:ys)
 
 -- sortWith
 -- ========
--- sortWith sorts a list based on a given order operator using mergesort (uses mergeWith)		 
+-- sortWith sorts a list with a given comparator using mergesort (uses mergeWith)		 
 sortWith :: (a -> a -> Bool) -> [a] -> [a]
 sortWith boolOp [] = []
 sortWith boolOp [x] = [x]
 sortWith boolOp x = mergeWith boolOp (sortWith boolOp (takehalf x)) (sortWith boolOp (drophalf x))
 
-
+-- ciLess
+-- ======
+-- case insensitive string less comparator
 ciLess :: String -> String -> Bool
 a `ciLess` b =
     a' < b'
@@ -37,7 +39,8 @@ a `ciLess` b =
         a' = map toLower a
         b' = map toLower b
     
-
+-- ciSort
+-- ======
 -- case insensitive string ordering using sortWith / mergesort (ascending order)
 ciSort :: [String] -> [String]
 ciSort xs = sortWith (ciLess) xs
