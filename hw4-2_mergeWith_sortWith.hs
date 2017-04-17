@@ -29,6 +29,15 @@ sortWith boolOp [] = []
 sortWith boolOp [x] = [x]
 sortWith boolOp x = mergeWith boolOp (sortWith boolOp (takehalf x)) (sortWith boolOp (drophalf x))
 
+
+ciLess :: String -> String -> Bool
+a `ciLess` b =
+    a' < b'
+    where
+        a' = map toLower a
+        b' = map toLower b
+    
+
 -- case insensitive string ordering using sortWith / mergesort (ascending order)
 ciSort :: [String] -> [String]
-ciSort xs = sortWith (<) [map toLower x | x <- xs]
+ciSort xs = sortWith (ciLess) xs
