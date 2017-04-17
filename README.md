@@ -55,8 +55,7 @@ Homework assignments for Nonprocedural Programming at Matfyz, Charles University
 		> (max `on` abs) (-5) 4
 		5
 		```
-	1.	`while c f a` applies function f on pairs in a given list and results puts in a new list;
-		if the list length is odd, the last element is not changed
+	1.	`while c f a` applies a given function *f* on its argument *a* as long as the argument satisfies condition *c*
 
 		```haskell
 		while :: (a -> Bool) -> (a -> a) -> a -> a
@@ -71,3 +70,14 @@ Homework assignments for Nonprocedural Programming at Matfyz, Charles University
 		> pairwise (+) [1..9]
 		[3,7,11,15,9]
 		```
+1.	`sortWith op xs` sorts a list according to a given operator, `ciSort` sorts an array of strings case insensitively
+
+	```haskell
+	sortWith  :: (a -> a -> Bool) -> [a] -> [a]
+	> sortWith (<) [10,9..1]
+	[1,2,3,4,5,6,7,8,9,10]
+	
+	ciSort :: [String] -> [String]
+	> ciSort ["Sort", "me"]
+	["me","Sort"]
+	```
