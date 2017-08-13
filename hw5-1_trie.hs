@@ -1,4 +1,4 @@
-module Trie where -- getting rid of ghc-mod error
+module Trie where
 
 import qualified Data.Map.Strict as M
 import Data.Maybe
